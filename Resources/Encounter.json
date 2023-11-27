@@ -1,0 +1,42 @@
+{
+    "resourceType": "Encounter",
+    "id": "2702",
+    "meta": {
+        "versionId": "2",
+        "lastUpdated": "2023-07-31T07:17:56.626+00:00",
+        "source": "#62ceec120fbf98f9"
+    },
+    "status": "planned",
+    "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "VR",
+        "display": "virtual"
+    },
+    "subject": {
+        "reference": "Patient/2680"
+    },
+    "participant": [
+        {
+            "type": [
+                {
+                    "coding": [
+                        {
+                            "display": "admitter"
+                        }
+                    ]
+                }
+            ],
+            "individual": {
+                "reference": "Practitioner/362"
+            }
+        }
+    ],
+    "period": {
+        "start": "2023-07-31"
+    },
+    "reasonCode": [
+        {
+            "text": "The patient had a TeleHealth care with a practitioner with concern to the patient's health condition"
+        }
+    ]
+}

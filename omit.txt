@@ -1,0 +1,13 @@
+[run]
+omit =
+    # omit anything in a .local directory anywhere
+    */.local/*
+    # omit everything in /usr
+    /myEnv/*
+    /Resources/*
+
+    # omit this single file
+    Dockerfile
+    README.md
+    requirements.txt
+    app.py

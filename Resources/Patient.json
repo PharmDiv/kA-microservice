@@ -1,0 +1,75 @@
+{
+    "resourceType": "Patient",
+    "id": "2680",
+    "meta": {
+        "versionId": "2",
+        "lastUpdated": "2023-07-27T06:29:47.125+00:00",
+        "source": "#285e93a8a5e817b2"
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Christiana <b>LAUREL </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Address</td><td/></tr><tr><td>Date of birth</td><td><span>28 August 1981</span></td></tr></tbody></table></div>"
+    },
+    "extension": [
+        {
+            "url": "https://fhir-server-service.lafia.io/fhir/StructureDefinition/lafiaUserAnthropometry",
+            "extension": [
+                {
+                    "url": "height",
+                    "valueQuantity": {
+                        "value": 0.0,
+                        "unit": "ft",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "ft_i"
+                    }
+                },
+                {
+                    "url": "weight",
+                    "valueQuantity": {
+                        "value": 0.0,
+                        "unit": "kg",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "kg"
+                    }
+                }
+            ]
+        },
+        {
+            "url": "https://fhir-server-service.lafia.io/fhir/StructureDefinition/patient-insurance-provider",
+            "valueIdentifier": {
+                "system": "https://suresalama.com"
+            }
+        }
+    ],
+    "active": true,
+    "name": [
+        {
+            "use": "official",
+            "text": "Christiana Laurel",
+            "family": "Laurel",
+            "given": [
+                "Christiana"
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "email",
+            "value": "mcdavidemereuwa95+laurel@gmail.com",
+            "use": "home",
+            "rank": 0
+        },
+        {
+            "system": "phone",
+            "value": "89743783123",
+            "use": "mobile",
+            "rank": 0
+        }
+    ],
+    "gender": "female",
+    "birthDate": "1981-08-28",
+    "deceasedBoolean": false,
+    "managingOrganization": {
+        "reference": "Organization/3"
+    }
+}

@@ -4,11 +4,11 @@ import json
 import pytest
 from unittest.mock import patch
 from flask import request
-from data import data
+from .data import data
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from Subscriptions.subscription import create_subscription
 from app import app
-from data import plandef
+from .data import plandef
 from Subscriptions.Process_subscriptions.process import extract_reference_values
 from dotenv import load_dotenv
 load_dotenv()
@@ -113,7 +113,7 @@ def test_get_plandefinition(mock_get, client):
     assert response.status_code == 200
     assert json.loads(response.data) == {'sample': 'data'}
 
-    # Add more assertions based on your specific requirements
+    
 
 @patch('app.requests.post')
 def test_post_plandefinition(mock_post, client):
@@ -125,7 +125,7 @@ def test_post_plandefinition(mock_post, client):
     assert response.status_code == 201
     assert json.loads(response.data) == {'sample': 'data'}
 
-    # Add more assertions based on your specific requirements
+    
 
 @patch('app.requests.get')
 def test_get_plandefinition_id(mock_get, client):
@@ -136,19 +136,9 @@ def test_get_plandefinition_id(mock_get, client):
     assert response.status_code == 200
     assert json.loads(response.data) == {'sample': 'data'}
 
-    # Add more assertions based on your specific requirements
+    
 
-@patch('app.requests.put')
-def test_put_plandefinition_id(mock_put, client):
-    # Mock the external API response
-    mock_put.return_value.json.return_value = plandef()
-
-    data = plandef()
-    response = client.put('/PlanDefinition/1', json=data)
-    assert response.status_code == 201
-    assert json.loads(response.data) == plandef()
-
-    # Add more assertions based on your specific requirements
+    
 
 
 

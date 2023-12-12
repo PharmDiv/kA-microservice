@@ -60,7 +60,9 @@ jobs:
       - name: Test with pytest
         run: |
           coverage run -m pytest
-        
+      - name: Generate coverage report
+        run: |
+          coverage xml --include=./*    
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
         env:
